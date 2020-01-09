@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rock/Paper/Scissors</h1>
+    <script type="text/javascript">
+        alert("Let's play rock/paper/scissors! (10 rounds)");
+        var wins = 0;
+        var rps=["rock", "paper", "scissors"];
+        for (var i=1; i<=10; i++)
+        {
+            var comp=Math.floor(Math.random()*3);
+            console.log(comp);
+            
+            var user=prompt("I've chosen mine, time to choose yours! (type rock, paper, scissors)");
+            var userNum = -1;
+            if(user[0]=="r" || user[0]=="R")
+            {   userNum=0;}
+            else if(user[0]=="p" || user[0]=="P")
+            {   userNum=1;}
+            else if(user[0]=="s" || user[0]=="S")
+            {   userNum=2;}
+
+            if (userNum==-1)
+            {
+                alert ("unkown input.. :/");
+                i--;
+            }
+            else if (userNum==comp)
+            {   alert("DRAT! We both picked " + rps[comp]);}
+            else if (userNum==comp-1 || userNum==comp+2)
+            {   alert("Congrats! " + rps[userNum] + " beats " + rps[comp]);    wins++;}
+            else
+            {   alert("Gotcha! " + rps[comp] + " beats " + rps[userNum]);}
+        }
+        alert("you won " +wins+ " out of 10 times!");
+    </script>
+    
+</body>
+</html>
