@@ -34,9 +34,9 @@
             else if (userNum==comp)
             {   alert("DRAT! We both picked " + rps[comp]);}
             else if (userNum==comp-1 || userNum==comp+2)
-            {   alert("Congrats! " + rps[userNum] + " beats " + rps[comp]);    wins++;}
-            else
             {   alert("Gotcha! " + rps[comp] + " beats " + rps[userNum]);}
+            else
+            {   alert("Congrats! " + rps[userNum] + " beats " + rps[comp]);    wins++;}
         }
         alert("you won " +wins+ " out of 10 times!");
     </script>
