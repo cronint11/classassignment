@@ -17,7 +17,7 @@
             var comp=Math.floor(Math.random()*3);
             console.log(rps[comp]);
             
-            var user=prompt("I've chosen mine, time to choose yours! (type rock, paper, scissors)");
+            var user=prompt("I've chosen mine, time to choose yours! (type (r)ock, (p)aper, or (s)cissors)");
             var userNum = -1;
             if(user[0]=="r" || user[0]=="R")
             {   userNum=0;}
@@ -28,7 +28,7 @@
 
             if (userNum==-1)
             {
-                alert ("unkown input.. :/");
+                alert ("unknown input.. :/");
                 i--;
             }
             else if (userNum==comp)
